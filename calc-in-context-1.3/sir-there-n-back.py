@@ -4,12 +4,12 @@ initialI = 2100
 initialR = 2500
 
 deltat = 1
-days = 3
+days = 1
 
 a = 0.00001
 b = 1/14
 
-rounding = 3
+rounding = 4
 
 t = initialt
 S = initialS
@@ -33,7 +33,11 @@ for k in range(int(days/deltat)):
     I += deltaI
     R += deltaR
     #Print new values
-    print(round(t, rounding),round(S, rounding),round(I, rounding),round(R, rounding))
+    #print(round(t, rounding),round(S, rounding),round(I, rounding),round(R, rounding))
+
+finalS = S
+finalI = I
+finalR = R
 
 for k in range(int(days/deltat)):
     #Calculate the rates of change
@@ -50,4 +54,6 @@ for k in range(int(days/deltat)):
     I += deltaI
     R += deltaR
     #Print new values
-    print(round(t, rounding),round(S, rounding),round(I, rounding),round(R, rounding))
+    #print(round(t, rounding),round(S, rounding),round(I, rounding),round(R, rounding))
+
+print(deltat, round(finalS, rounding), round(finalI, rounding), round(finalR, rounding), round(S, rounding), round(abs(initialS - S), rounding))
