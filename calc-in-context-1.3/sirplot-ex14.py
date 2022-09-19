@@ -5,7 +5,7 @@ S = 45400
 I = 2100
 R = 2500
 
-deltat = 0.01
+deltat = -0.01
 
 a = 0.00001
 b = 1/14
@@ -17,7 +17,7 @@ rlist = [R]
 
 Iprime = a*S*I - b*I
 
-while Iprime > 0:
+while I >= 1:
     #Calculate the rates of change
     Sprime = -1*a*S*I
     Iprime = a*S*I - b*I
@@ -37,11 +37,11 @@ while Iprime > 0:
     ilist.append(I)
     rlist.append(R)
 
-print(t - deltat, S)
+print(t - deltat, S, I, R)
 
-"""
+#"""
 plot(tlist,slist)
 plot(tlist,ilist)
 plot(tlist,rlist)
 show()
-"""
+#"""

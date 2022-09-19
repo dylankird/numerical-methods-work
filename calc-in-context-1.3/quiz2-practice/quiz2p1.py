@@ -3,8 +3,8 @@ initialS = 45400
 initialI = 2100
 initialR = 2500
 
-deltat = -0.05
-days = 6
+deltat = 0.25
+days = 120
 
 a = 0.00001
 b = 1/14
