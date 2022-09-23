@@ -1,4 +1,4 @@
-deltats = [0.001]
+deltats = [1,0.1,0.01,0.001,0.0001]
 
 rounding = 6
 
@@ -15,6 +15,6 @@ for deltat in deltats:
         t += deltat
         R += deltaR
         #Print new values
-        print(t,round(R, rounding),sep='\t')
+    print(deltat,round(R, rounding),sep='\t')
 
 #note: a digit has stabilized when it pops up twice. We can use an answer accurate to that digit.
